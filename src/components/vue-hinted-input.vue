@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "hintedInput",
+  name: "VueHintedInput",
   props: {
     id: {
       required: true
@@ -70,7 +70,6 @@ export default {
   },
   computed: {
     empty: function() {
-      console.log(this.value != null && this.value.length === 0);
       return this.value != null && this.value.length === 0;
     }
   }

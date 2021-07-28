@@ -1,10 +1,11 @@
 {
   "name": "vue-hinted-input",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
+  "repository": "aleasper/vue-hinted-input",
   "scripts": {
     "lint": "vue-cli-service lint",
-    "build-package": "vue-cli-service build --target lib --name vue-hinted-input ./src/components/hinted-input.vue"
+    "build-package": "vue-cli-service build --target lib --name vue-hinted-input src/components/vue-hinted-input.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -25,5 +26,6 @@
     "dist/*",
     "src/*",
     "*.json"
-  ]
+  ],
+  "main": "src/components/vue-hinted-input.vue"
 }

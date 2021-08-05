@@ -10,10 +10,29 @@ npm i vue-hinted-input
 ```
 <template>
   <div id="app">
-    <hintedInput
-        :id="'input-id'"
-        :hint="'Displayed hint'"
-    ></hintedInput>
+        <hinted-input
+                :id="'input-id0'"
+                :hint="'I am hint'"
+                v-model="value0"
+        ></hinted-input>
+        <hinted-input
+                :id="'input-id1'"
+                :hint="'I am disabled'"
+                :disabled="true"
+                v-model="value1"
+        ></hinted-input>
+        <hinted-input
+                :id="'input-id2'"
+                :hint="'Type here for search'"
+                :search="true"
+                v-model="value2"
+        ></hinted-input>
+        <hinted-input
+                :id="'input-id3'"
+                :hint="'I am clearable'"
+                :clearable="true"
+                v-model="value3"
+        ></hinted-input>
   </div>
 </template>
 
@@ -23,8 +42,14 @@ import hintedInput from 'vue-hinted-input';
 export default {
   name: 'App',
   components: {
-    hintedInput
-  }
+    'hinted-input': hintedInput
+  },
+  data: {
+    value0: '',
+    value1: '',
+    value2: '',
+    value3: ''
+  },
 }
 </script>
 

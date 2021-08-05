@@ -1,15 +1,15 @@
 <template>
   <div
-      class="field-container"
+      :class="['field-container', {'disabled': disabled}]"
       ref="wrapper"
   >
     <input
         :id="id"
-        class="field-input"
+        :class="['field-input']"
         name="inputName"
         type="text"
         :placeholder="hint"
-
+        :disabled="disabled"
         :value="value"
         @input="handleInput"
 
@@ -20,8 +20,8 @@
         :for="id"
     >{{hint}}</label>
     <div
-        v-if="search"
-        v-bind:class="{ 'overlay-img': true, 'search-ing': empty, 'x-img':  !empty || clearable}"
+        v-if="search || clearable"
+        v-bind:class="['overlay-img', {'search-ing': empty && search, 'x-img':  !empty && (clearable || search)}]"
         v-on:click="clear"
     ></div>
   </div>
@@ -44,6 +44,10 @@ export default {
       default: false
     },
     clearable: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
       type: Boolean,
       default: false
     }
@@ -80,6 +84,7 @@ export default {
 $field-container-padding: 5px;
 $label-padding: $field-container-padding !default;
 $border-color: #C4C4C4;
+$disable-background: #DEDEDE;
 $input-hint-color: #C1C1C1;
 $hint-font-weight: 400;
 $main-font-weight: 400;
@@ -104,6 +109,10 @@ $hover-color: #F9F9F9;
 
   &:hover:not(.focused) {
     background: $hover-color;
+  }
+
+  &.disabled {
+    background-color: $disable-background;
   }
 }
 
@@ -156,6 +165,7 @@ input[type="text"].field-input {
   &:-ms-input-placeholder {
     color: transparent;
   }
+
 }
 .overlay-img {
   position: absolute;

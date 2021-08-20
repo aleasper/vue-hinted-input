@@ -103,6 +103,7 @@ $hover-color: #F9F9F9;
   font-weight: $hint-font-weight;
   font-family: Roboto, sans-serif;
   width: 100%;
+  box-sizing: border-box;
 
   &:active {
     border: 1px solid $accent;

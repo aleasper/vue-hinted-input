@@ -102,6 +102,7 @@ $hover-color: #F9F9F9;
   color: $input-hint-color;
   font-weight: $hint-font-weight;
   font-family: Roboto, sans-serif;
+  width: 100%;
 
   &:active {
     border: 1px solid $accent;

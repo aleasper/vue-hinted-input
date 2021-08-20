@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$field-container-padding: 5px;
+$field-container-padding: 0.3125em;
 $label-padding: $field-container-padding !default;
 $border-color: #C4C4C4;
 $disable-background: #DEDEDE;
@@ -95,9 +95,9 @@ $hover-color: #F9F9F9;
   position: relative;
   border: 1px solid $border-color;
   border-radius: 6px;
-  height: 45px;
+  height: 2.8125em;
   min-width: 210px;
-  padding-left: 12px;
+  padding-left: 0.75em;
   background: #FFFFFF;
   color: $input-hint-color;
   font-weight: $hint-font-weight;
@@ -137,8 +137,8 @@ input[type="text"].field-input {
   border: none;
   border-radius: 6px;
   padding: $label-padding;
-  margin-top: 16px;
-  font-size: 16px;
+  margin-top: 1em;
+  font-size: 1em;
   display: block;
   box-sizing: border-box;
   width: 100%;
@@ -152,7 +152,7 @@ input[type="text"].field-input {
     ~ label {
       color: $input-hint-color;
       font-weight: $hint-font-weight;
-      font-size: 13px;
+      font-size: 0.8125em;
       top: calc(28% - 0.5rem);
       transform: translate(#{$label-padding}, 0%);
     }
@@ -171,14 +171,14 @@ input[type="text"].field-input {
 }
 .overlay-img {
   position: absolute;
-  top: calc(50% - 12px);
-  right: 10px;
+  top: calc(50% - 0.75em);
+  right: 0.625em;
   z-index: 1;
   background-repeat: no-repeat, repeat;
   background-image: url('../assets/search.svg');
   background-size: 100%;
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
 }
 
 .search-img {
@@ -186,10 +186,10 @@ input[type="text"].field-input {
 }
 
 .x-img {
-  top: calc(50% - 6px);
-  width: 12px;
-  height: 12px;
-  right: 16px;
+  top: calc(50% - 0.375em);
+  width: 0.75em;
+  height: 0.75em;
+  right: 1em;
   background-image: url('../assets/close_x.svg');
 }
 
